@@ -82,9 +82,9 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a192f] text-white font-sans selection:bg-blue-500 selection:text-white">
+    <div className="min-h-screen bg-[#020617] text-white font-sans selection:bg-blue-500 selection:text-white">
       {/* Sticky Header with Timer */}
-      <header className="fixed top-0 left-0 w-full bg-[#0a192f]/80 backdrop-blur-md z-50 border-b border-blue-900/50">
+      <header className="fixed top-0 left-0 w-full bg-[#020617]/80 backdrop-blur-md z-50 border-b border-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center font-bold text-xl">R</div>
@@ -111,12 +111,16 @@ export default function App() {
               <span className="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-semibold uppercase tracking-wider">
                 32 Modelos Prontos para Conversão
               </span>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-blue-200">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-blue-300">
                 Tenha um site que realmente traz clientes para o seu negócio
               </h1>
-              <p className="text-lg md:text-xl text-blue-200/80 mb-10 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-xl text-blue-200/80 mb-6 max-w-2xl mx-auto leading-relaxed">
                 Transforme visitantes em clientes com páginas profissionais e estratégicas. Você recebe 32 modelos pensados exclusivamente para vender.
               </p>
+              <div className="mb-10 flex items-center justify-center gap-4 text-green-400 font-bold text-sm md:text-base bg-green-500/10 py-2 px-6 rounded-full border border-green-500/20 w-fit mx-auto">
+                <Zap className="w-5 h-5" />
+                <span>Receba os modelos editáveis via WhatsApp e E-mail imediatamente após a compra!</span>
+              </div>
               
               <div className="flex flex-col items-center gap-6">
                 <div className="flex flex-col items-center">
@@ -149,8 +153,50 @@ export default function App() {
           </div>
         </section>
 
-        {/* 2. Pain Points Section */}
-        <section className="py-20 bg-[#0d1f3d]">
+        {/* 2. Mockups Showcase */}
+        <section className="py-20 bg-[#020617] relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="relative z-20 bg-slate-900/50 rounded-2xl p-1 border border-blue-500/20 shadow-2xl overflow-hidden">
+                  <img 
+                    src="https://i.pinimg.com/736x/88/83/25/8883259741428287843d39929a032b8a.jpg" 
+                    alt="Modelos de Sites" 
+                    className="rounded-xl w-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                {/* Subtle glow effect behind image */}
+                <div className="absolute -inset-4 bg-blue-500/10 blur-3xl rounded-full -z-10" />
+              </motion.div>
+              <div className="text-center lg:text-left">
+                <h2 className="text-3xl md:text-5xl font-black mb-6">Design que converte em qualquer tela</h2>
+                <p className="text-lg text-blue-200/70 mb-8">
+                  Nossos modelos são 100% responsivos. Seu cliente terá a mesma experiência de alta qualidade seja no computador, tablet ou celular.
+                </p>
+                <motion.a
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  href={CHECKOUT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all"
+                >
+                  Garantir meus modelos agora
+                  <ArrowRight className="w-5 h-5" />
+                </motion.a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 3. Pain Points Section */}
+        <section className="py-20 bg-[#030816]">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Você se identifica com algum desses problemas?</h2>
@@ -180,8 +226,8 @@ export default function App() {
           </div>
         </section>
 
-        {/* 3. Belief Breaking Section */}
-        <section className="py-24 px-4">
+        {/* 4. Belief Breaking Section */}
+        <section className="py-24 px-4 bg-[#020617]">
           <div className="max-w-5xl mx-auto bg-gradient-to-br from-blue-600 to-blue-800 rounded-[40px] p-8 md:p-16 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 blur-[80px] rounded-full -mr-32 -mt-32" />
             
@@ -219,8 +265,8 @@ export default function App() {
           </div>
         </section>
 
-        {/* 4. Solution Presentation */}
-        <section className="py-20 bg-[#0a192f]">
+        {/* 5. Solution Presentation */}
+        <section className="py-20 bg-[#020617]">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <h2 className="text-4xl md:text-5xl font-black mb-6">A Solução Prática que Você Precisa</h2>
             <p className="text-xl text-blue-200/80 mb-16 max-w-3xl mx-auto">
@@ -245,8 +291,8 @@ export default function App() {
           </div>
         </section>
 
-        {/* 5. Benefits Section */}
-        <section className="py-24 bg-[#0d1f3d]">
+        {/* 6. Benefits Section */}
+        <section className="py-24 bg-[#030816]">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
@@ -278,9 +324,9 @@ export default function App() {
               <div className="relative">
                 <div className="absolute -inset-4 bg-blue-500/20 blur-2xl rounded-[40px]" />
                 <img 
-                  src="https://picsum.photos/seed/dashboard/800/600" 
-                  alt="Dashboard Preview" 
-                  className="relative rounded-[32px] border border-blue-400/20 shadow-2xl"
+                  src="https://i.pinimg.com/1200x/47/54/5c/47545cdc098401816c03035d22f73657.jpg" 
+                  alt="Modelos Rocket Sells" 
+                  className="relative rounded-[32px] border border-blue-400/20 shadow-2xl w-full object-cover"
                   referrerPolicy="no-referrer"
                 />
               </div>
@@ -288,10 +334,10 @@ export default function App() {
           </div>
         </section>
 
-        {/* 6. What's Included */}
-        <section className="py-20">
+        {/* 7. What's Included */}
+        <section className="py-20 bg-[#020617]">
           <div className="max-w-7xl mx-auto px-4">
-            <div className="bg-[#0a192f] rounded-[40px] border border-blue-900/50 p-8 md:p-16">
+            <div className="bg-[#030816] rounded-[40px] border border-blue-900/30 p-8 md:p-16">
               <h2 className="text-3xl md:text-4xl font-black text-center mb-12">Tudo o que você vai receber hoje:</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
@@ -314,8 +360,8 @@ export default function App() {
           </div>
         </section>
 
-        {/* 7. Testimonials */}
-        <section className="py-24 bg-[#0d1f3d]">
+        {/* 8. Testimonials */}
+        <section className="py-24 bg-[#030816]">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-4xl font-black text-center mb-16">O que dizem nossos clientes</h2>
             <div className="grid md:grid-cols-3 gap-8">
@@ -324,7 +370,7 @@ export default function App() {
                 { name: "Ana Oliveira", role: "Esteticista", text: "Eu não sabia nada de site. Com os modelos prontos, em uma tarde eu já estava com minha página no ar e agendando clientes." },
                 { name: "Marcos Souza", role: "Advogado", text: "O investimento se pagou no primeiro cliente que fechou comigo pelo site. Agora meus clientes confiam muito mais no meu trabalho." }
               ].map((t, i) => (
-                <div key={i} className="bg-[#0a192f] p-8 rounded-3xl border border-blue-900/50 relative">
+                <div key={i} className="bg-[#020617] p-8 rounded-3xl border border-blue-900/30 relative">
                   <div className="flex gap-1 mb-4">
                     {[1,2,3,4,5].map(star => <Star key={star} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
                   </div>
@@ -342,10 +388,10 @@ export default function App() {
           </div>
         </section>
 
-        {/* 8. Irresistible Offer */}
-        <section id="offer" className="py-24 px-4">
+        {/* 9. Irresistible Offer */}
+        <section id="offer" className="py-24 px-4 bg-[#020617]">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white text-[#0a192f] rounded-[48px] p-8 md:p-16 text-center shadow-[0_0_80px_rgba(59,130,246,0.3)] relative overflow-hidden">
+            <div className="bg-white text-[#020617] rounded-[48px] p-8 md:p-16 text-center shadow-[0_0_80px_rgba(59,130,246,0.2)] relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500" />
               
               <h2 className="text-3xl md:text-5xl font-black mb-4">Oferta Especial de Lançamento</h2>
@@ -392,8 +438,8 @@ export default function App() {
           </div>
         </section>
 
-        {/* 9. Guarantee Section */}
-        <section className="py-20 bg-[#0a192f]">
+        {/* 10. Guarantee Section */}
+        <section className="py-20 bg-[#020617]">
           <div className="max-w-3xl mx-auto px-4 text-center">
             <div className="inline-block p-4 bg-blue-500/10 rounded-full mb-8">
               <ShieldCheck className="w-16 h-16 text-blue-400" />
@@ -405,8 +451,8 @@ export default function App() {
           </div>
         </section>
 
-        {/* 10. FAQ Section */}
-        <section className="py-24 bg-[#0d1f3d]">
+        {/* 11. FAQ Section */}
+        <section className="py-24 bg-[#030816]">
           <div className="max-w-3xl mx-auto px-4">
             <h2 className="text-4xl font-black text-center mb-16">Perguntas Frequentes</h2>
             <div className="space-y-2">
@@ -430,8 +476,8 @@ export default function App() {
           </div>
         </section>
 
-        {/* 11. Final CTA */}
-        <section className="py-24 text-center px-4">
+        {/* 12. Final CTA */}
+        <section className="py-24 text-center px-4 bg-[#020617]">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-6xl font-black mb-8">Pronto para transformar seu site em uma máquina de clientes?</h2>
             <p className="text-xl text-blue-200/80 mb-12">Não deixe mais dinheiro na mesa por falta de um site profissional.</p>
@@ -450,7 +496,7 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="py-12 border-t border-blue-900/50 text-center text-blue-400/50 text-sm">
+      <footer className="py-12 border-t border-blue-900/30 text-center text-blue-400/30 text-sm bg-[#020617]">
         <div className="max-w-7xl mx-auto px-4">
           <p>© 2026 Rocket Sells. Todos os direitos reservados.</p>
           <p className="mt-2">Políticas de Privacidade | Termos de Uso</p>
