@@ -115,7 +115,7 @@ export default function App() {
                 Tenha um site que realmente traz clientes para o seu negócio
               </h1>
               <p className="text-lg md:text-xl text-blue-200/80 mb-6 max-w-2xl mx-auto leading-relaxed">
-                Transforme visitantes em clientes com páginas profissionais e estratégicas. Você recebe 32 modelos pensados exclusivamente para vender.
+                Transforme visitantes em clientes com páginas profissionais e estratégicas. Você recebe 32 modelos pensados exclusivamente para vender <span className="text-blue-400/60 italic text-base">ou revender</span>.
               </p>
               <div className="mb-10 flex items-center justify-center gap-4 text-green-400 font-bold text-sm md:text-base bg-green-500/10 py-2 px-6 rounded-full border border-green-500/20 w-fit mx-auto">
                 <Zap className="w-5 h-5" />
@@ -303,7 +303,8 @@ export default function App() {
                     "Passa profissionalismo imediato para quem te encontra",
                     "Facilita a decisão do cliente com um caminho claro",
                     "Cria um funil de vendas automático que trabalha 24h",
-                    "Economiza milhares de reais com agências e designers"
+                    "Economiza milhares de reais com agências e designers",
+                    "Oportunidade de lucro: Use para você ou revenda para clientes"
                   ].map((benefit, i) => (
                     <motion.div
                       key={i}
@@ -395,7 +396,8 @@ export default function App() {
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500" />
               
               <h2 className="text-3xl md:text-5xl font-black mb-4">Oferta Especial de Lançamento</h2>
-              <p className="text-lg font-bold text-blue-600 mb-8 uppercase tracking-widest">Acesso Imediato e Vitalício</p>
+              <p className="text-lg font-bold text-blue-600 mb-2 uppercase tracking-widest">Acesso Imediato e Vitalício</p>
+              <p className="text-sm text-blue-500/60 mb-6 italic">Uso pessoal ou para revenda ilimitada</p>
               
               <div className="flex flex-col items-center mb-10">
                 <span className="text-xl line-through opacity-50 mb-2">De R$ 97,00</span>
@@ -470,7 +472,7 @@ export default function App() {
               />
               <FAQItem 
                 question="Posso usar os modelos várias vezes?" 
-                answer="Sim! O acesso é vitalício e você pode usar os modelos para criar quantos sites quiser, seja para você ou para seus clientes." 
+                answer="Sim! O acesso é vitalício e você pode usar os modelos para criar quantos sites quiser, seja para uso próprio ou para revenda para seus clientes, ficando com 100% do lucro." 
               />
             </div>
           </div>
